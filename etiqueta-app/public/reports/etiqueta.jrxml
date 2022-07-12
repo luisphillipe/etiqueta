@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="etiqueta" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="59cbd4ae-f9e3-44a3-8c6e-b0c625615fe9">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Etiqueta"/>
+	<queryString language="SQL">
+		<![CDATA[select logo, cliente, nome_equipamento, observacao from etiquetas]]>
+	</queryString>
+	<field name="logo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="logo"/>
+		<property name="com.jaspersoft.studio.field.label" value="logo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="etiquetas"/>
+	</field>
+	<field name="cliente" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cliente"/>
+		<property name="com.jaspersoft.studio.field.label" value="cliente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="etiquetas"/>
+	</field>
+	<field name="nome_equipamento" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nome_equipamento"/>
+		<property name="com.jaspersoft.studio.field.label" value="nome_equipamento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="etiquetas"/>
+	</field>
+	<field name="observacao" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="observacao"/>
+		<property name="com.jaspersoft.studio.field.label" value="observacao"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="etiquetas"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="0" width="400" height="79" uuid="f23bd03d-ee8a-49d8-ad34-96f2f2ce7903"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{logo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="76" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="15" width="534" height="30" uuid="cc35e8f8-495d-4a81-ac2f-a1dc4c852c1f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="70" width="534" height="49" uuid="1f2f7466-2415-4eaa-940b-c2c95bd4a863">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a5f92f4-2fb5-4a38-a830-913c2741e5df"/>
+				</reportElement>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{observacao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="20" width="534" height="30" uuid="3337c811-6e21-40ed-b688-7abb51743bc1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6691c1a0-7122-4d6c-b138-776483fe5487"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nome_equipamento}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
