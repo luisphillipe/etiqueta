@@ -59,14 +59,6 @@ class EtiquetaController extends Controller
         return response()->json($data);
     }
 
-    /*
-    public function valida(Request $request){
-       //dd($request->all());
-         if ($request->empresa == null || $request->cliente == null || $request->equipamento == null) 
-            return redirect('etiquetas.create_etiqueta')->with('status', 'Favor preencher todos os campos.');
-    }
-*/
-
     public function gerarEtiqueta(Request $request)
     {
 
